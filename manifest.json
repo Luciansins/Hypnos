@@ -1,0 +1,41 @@
+{
+  // Required
+  "app": {
+    "background": {
+      // Optional
+      "scripts": ["wsc-chrome.min.js", "background.js"]
+    }
+  },
+  "manifest_version": 2,
+  "name": "My App",
+  "version": "0.1",
+
+  "description": "A plain text description",
+  // "icons": {},
+
+ "permissions": [
+        "alarms",
+        "unlimitedStorage",
+        "storage",
+        "notifications",
+    "browser",
+        "power",
+    "system.network",
+        {"fileSystem":["write","directory","retainEntries"]}
+    ],
+  "optional_permissions": [
+        "background"
+  ],
+    "sockets": {
+       "udp": {
+         "send": [""],
+         "bind": [""],
+         "multicastMembership": ""
+       },
+       "tcp": {
+         "connect": [""]
+       },
+       "tcpServer": {
+         "listen": ["*:*"]
+       }
+}}
